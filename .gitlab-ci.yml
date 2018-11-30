@@ -1,4 +1,6 @@
-image: maven:3-jdk-8
+# use this image because of 
+# https://stackoverflow.com/questions/53010200/maven-surefire-could-not-find-forkedbooter-class
+image: maven:3.6.0-jdk-8-alpine
 
 build:
   script: "mvn clean install -B -X"
